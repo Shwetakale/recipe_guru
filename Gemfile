@@ -45,3 +45,6 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'bootstrap-sass', '~> 3.3.3'
+gem 'haml-rails'
+gem 'simple_form'
