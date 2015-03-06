@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %title RecipeGuru
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    .wrap
+      .logo
+        LOGO
+    .navbar.navbar-static-top
+      .container
+        .navbar-collapse.collapse.navbar-responsive-collapse
+          .row
+            .col-md-14
+              .bs-example{"data-example-id" =>"btn-tags"}
+
+            .col-lg-9
+              = yield
+          %footer
+            %p &copy; Company 2015
