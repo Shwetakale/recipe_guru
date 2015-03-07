@@ -54,3 +54,5 @@ group :prduction do
 end
 gem 'devise-bootstrap-views'
 gem 'nested_form'
+gem 'redactor-rails'
+
