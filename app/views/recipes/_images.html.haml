@@ -1,0 +1,6 @@
+#images
+  = f.fields_for :images do |image|
+    = image.file_field :files, multiple: true
+    %br
+    = image.link_to_remove "Remove", class: "btn btn-primary"
+  = f.link_to_add "Add more", :images, class: "btn btn-primary", data: {target: "#images"}

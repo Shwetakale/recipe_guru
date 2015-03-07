@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+
+['Gemelli', 'Fusilli', 'Pasta', 'Butter', 
+ 'Unsalted Butter', 'Leeks', 'Kosher Salt', 
+ 'Black Pepper', 'Shrimp', 'Lemon', 'Cream', 'Spinach'].sort.each do |content|
+   Content.create({name: content})
+ end
+

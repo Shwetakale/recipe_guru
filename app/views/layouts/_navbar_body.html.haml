@@ -2,7 +2,7 @@
   %ul.nav.navbar-nav
     - unless false
       
-      %li= link_to content_tag(:span, "", class: "glyphicon glyphicon-list-alt") + "  Recipes", "#" if signed_in?
+      %li= link_to content_tag(:span, "", class: "glyphicon glyphicon-list-alt") + "  Recipes", recipes_url
   
       - if true
         %li.dropdown
