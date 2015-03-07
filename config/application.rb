@@ -30,13 +30,15 @@ module RecipeGuru
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-    config.before_configuration do
-      env_file = File.join(Rails.root, 'config', 'environment.yml')
-      environment_yml = YAML.load(File.open(env_file)) if File.exist?(env_file)
-      puts environment_yml
-      environment_yml.each do |key,value|
-        ENV[key.to_s] = value
-      end if environment_yml.present?
+    unless Rails.env.production?
+      config.before_configuration do
+        env_file = File.join(Rails.root, 'config', 'environment.yml')
+        environment_yml = YAML.load(File.open(env_file)) if File.exist?(env_file)
+        puts environment_yml
+        environment_yml.each do |key,value|
+          ENV[key.to_s] = value
+        end if environment_yml.present?
+      end
     end
   end
 end
