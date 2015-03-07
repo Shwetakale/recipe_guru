@@ -1,0 +1,11 @@
+#new_ingredient
+  = f.fields_for :ingredients do |ingredient|
+    .row 
+      .col-md-4
+        = ingredient.association :content, collection: Content.all.collect{|c| ["#{c.name} - #{c.taste}", c.id]}
+      .col-md-4
+        = ingredient.input :quantity
+      .col-md-4
+        %br
+        = ingredient.link_to_remove "Remove", class: "btn btn-primary"
+  = f.link_to_add "Add more", :ingredients, class: "btn btn-primary", data: {target: "#new_ingredient"}

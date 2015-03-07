@@ -1,5 +1,7 @@
 = f.input :title
 = f.input :pre_requirements
+%strong Ingredients
+= render partial: 'ingredients', locals: {f: f}
 = f.input :steps
 = f.input :description
 = f.input :benifits
