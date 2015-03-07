@@ -53,3 +53,4 @@ group :prduction do
   gem 'rails_12factor'
 end
 gem 'devise-bootstrap-views'
+gem 'nested_form'
