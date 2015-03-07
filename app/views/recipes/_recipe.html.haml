@@ -1,0 +1,22 @@
+= recipe.title.try(:capitalize)
+%br 
+%b Description:
+= recipe.description
+- if recipe.pre_requirements.present?
+  %br 
+  %b Pre Requirements:
+  = recipe.pre_requirements
+%br 
+#ingredients
+%table
+  %tr
+    %td
+      %b Ingredients:
+    %td
+      %table
+        - recipe.ingredients.each do |ing|
+          %tr
+            %td
+              #{ing.content.name} - #{ing.quantity}
+    %br 
+= raw(recipe.steps)
