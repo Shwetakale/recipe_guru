@@ -11,6 +11,7 @@
  * file per style scope.
 *
 *= require devise_bootstrap_views
+*= require redactor-rails
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
