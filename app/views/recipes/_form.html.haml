@@ -1,7 +1,7 @@
 = f.input :title
 %strong Ingredients
 = render partial: 'ingredients', locals: {f: f}
-= f.input :steps, placeholder: 'Enter Steps here', input_html: {class: 'redactor'}
+= f.input :steps, placeholder: 'Enter Steps here', input_html: {class: 'redactor'}, :as => :ckeditor
 .row
   .col-md-6
     = f.input :description
