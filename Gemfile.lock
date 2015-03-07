@@ -150,6 +150,10 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
+    redactor-rails (0.5.0)
+      devise
+      mime-types
+      orm_adapter
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
     ruby-graphviz (1.0.9)
@@ -215,6 +219,7 @@ DEPENDENCIES
   rails (= 4.2.0)
   rails-erd
   rails_12factor
+  redactor-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simple_form
