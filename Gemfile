@@ -1,6 +1,6 @@
+
 source 'https://rubygems.org'
 
-ruby '2.1.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use postgres as the database for Active Record
@@ -52,3 +52,4 @@ gem 'simple_form'
 group :prduction do
   gem 'rails_12factor'
 end
+gem 'devise-bootstrap-views'
