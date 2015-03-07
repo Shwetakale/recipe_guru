@@ -6,6 +6,8 @@ class Recipe < ActiveRecord::Base
 
   validates :user, :title, :steps, presence: true
   validates :title, uniqueness: true
+
+  accepts_nested_attributes_for :ingredients
   # Validations
   # Limitation for no. of characters for description
 end
