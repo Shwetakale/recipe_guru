@@ -34,7 +34,6 @@ module RecipeGuru
       config.before_configuration do
         env_file = File.join(Rails.root, 'config', 'environment.yml')
         environment_yml = YAML.load(File.open(env_file)) if File.exist?(env_file)
-        puts environment_yml
         environment_yml.each do |key,value|
           ENV[key.to_s] = value
         end if environment_yml.present?
