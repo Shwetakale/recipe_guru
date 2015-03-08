@@ -5,26 +5,26 @@
     .col-md-12
       = f.input :time, label: false, placeholder: 'Time'
     .col-md-12
-      = f.input :description
+      = f.input :description, label: false, placeholder: 'Description'
     .col-md-12
-      = f.input :pre_requirements
+      = f.input :pre_requirements, label: false, placeholder: 'Pre Requirements'
     .col-md-12
   .col-md-9
+    = render partial: 'ingredients', locals: {f: f}
     .col-md-12
-      %strong 
-        %label Ingredients
-    .col-md-12
-      = render partial: 'ingredients', locals: {f: f}
       %br
       %br
-    .col-md-12
       = f.input :steps, label: 'Recipe', placeholder: 'Enter Steps here', input_html: {class: 'redactor'}, :as => :ckeditor
 .row
   = render partial: 'images', locals: {f: f}
 %br
 %br
 %br
-= f.input :benifits
-= f.submit class: "btn btn-primary"
+.col-md-1
+  %label Benifits:
+.col-md-5
+  = f.input :benifits, input_html: { rows: 4, cols: 6 }, label: false, placeholder: 'Description (if any)'
+.col-lg-12
+  .pull-right= f.submit class: "btn btn-info"
 
 
