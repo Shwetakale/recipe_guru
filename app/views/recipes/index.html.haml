@@ -1,3 +1,8 @@
-.row
-  .col-md-3= render partial: 'list'
-  .col-md-8= render partial: 'recipe', locals: {recipe: @recipe}
+- if @recipe.present?
+  .row
+    .col-md-3= render partial: 'list'
+    .col-md-8= render partial: 'recipe', locals: {recipe: @recipe}
+- else
+  Be first to add recipes!! 
+  - unless current_user
+    Sign up to add recipes !!

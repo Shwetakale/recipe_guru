@@ -1,48 +1,54 @@
-.div
-  %center
-    %b=recipe.title.try(:capitalize)
+- unless recipe.blank?
+  .div
+    %center
+      %b=recipe.title.try(:capitalize)
 
-  - if recipe.images.count > 0
-    #myCarousel.carousel.slide{ "data-ride"=>"carousel" }
-      %ol.carousel-indicators
-        - recipe.images.count.times do |index|
-          - active = 'active' if (index == 0)
-          %li{ "data-target" => "#myCarousel", "data-slide-to"=> index, class: active}
+    - if recipe.images.count > 0
+      #myCarousel.carousel.slide{ "data-ride"=>"carousel" }
+        %ol.carousel-indicators
+          - recipe.images.count.times do |index|
+            - active = 'active' if (index == 0)
+            %li{ "data-target" => "#myCarousel", "data-slide-to"=> index, class: active}
 
-      .carousel-inner{role:"listbox"}
-        - active = 'active'
-        - recipe.images.each do |image|
-          %center.item{class: active}= image_tag image.try(:avatar_url), size: '300x300'
-          - active = ''
+        .carousel-inner{role:"listbox"}
+          - active = 'active'
+          - recipe.images.each do |image|
+            %center.item{class: active}= image_tag image.try(:avatar_url), size: '300x300'
+            - active = ''
 
 
-      %a{ class: "left carousel-control", href: "#myCarousel", role:"button", "data-slide"=>"prev"}
-        %span{ class:"glyphicon glyphicon-chevron-left", "aria-hidden"=> "true" }
-        %span.sr-only Previous
+        %a{ class: "left carousel-control", href: "#myCarousel", role:"button", "data-slide"=>"prev"}
+          %span{ class:"glyphicon glyphicon-chevron-left", "aria-hidden"=> "true" }
+          %span.sr-only Previous
     
-      %a{ class: "right carousel-control", href: "#myCarousel", role:"button", "data-slide"=>"prev"}
-        %span{ class: "glyphicon glyphicon-chevron-right", "aria-hidden" => "true" }
-        %span.sr-only Next
-%br
-%b Time:
-= recipe.time
-%br
-%b Description:
-%p= recipe.description
-%br
-- if recipe.pre_requirements.present?
-  %b Pre Requirements:
-  %p= recipe.pre_requirements
-%br
-#ingredients
-  %b Ingredients:
-  - recipe.ingredients.each do |ing|
-    = ing.content.name + '-' + ing.quantity + '(' + ing.description + ')'
-%br
-%b Recipe:
-%p= raw(recipe.steps)
-%br
-Rate the recipe : 
-= rating_for recipe, "Like", star: 5, disable_after_rate: false
-%br
-= commontator_thread(recipe)
+        %a{ class: "right carousel-control", href: "#myCarousel", role:"button", "data-slide"=>"prev"}
+          %span{ class: "glyphicon glyphicon-chevron-right", "aria-hidden" => "true" }
+          %span.sr-only Next
+  %br
+  %b Time:
+  = recipe.time
+  %br
+  %b Description:
+  %p= recipe.description
+  %br
+  - if recipe.pre_requirements.present?
+    %b Pre Requirements:
+    %p= recipe.pre_requirements
+  %br
+  #ingredients
+    %b Ingredients:
+    - recipe.ingredients.each do |ing|
+      = ing.content.name + '-' + ing.quantity + '(' + ing.description + ')'
+  %br
+  %b Recipe:
+  %p= raw(recipe.steps)
+  %br
+  - if current_user.eql?(@recipe.user)
+    %center
+      = link_to "Edit", edit_recipe_path(@recipe), class: 'btn btn-primary'
+      = link_to "Remove", recipe_path(@recipe), method: :delete, class: 'btn btn-primary'
+  .row
+  Rate the recipe : 
+  = rating_for recipe, "Like", star: 5, disable_after_rate: false
+  %br
+  = commontator_thread(recipe)
