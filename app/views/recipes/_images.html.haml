@@ -7,8 +7,11 @@
 .col-md-7
   #images
     = f.fields_for :images do |image|
-      .col-md-12
-        .col-md-6
-          = image.file_field :avatar
-        .col-md-4
-          = image.link_to_remove "Remove", class: "btn btn-danger btn-xs"
+      - if image.object.persisted?
+        .col-md-3= image_tag image.object.avatar.thumb.url
+      - else
+        .col-md-12
+          .col-md-6
+            = image.file_field :avatar
+          .col-md-4
+            = image.link_to_remove "Remove", class: "btn btn-danger btn-xs"
