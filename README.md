@@ -8,7 +8,7 @@ This project is all about get different and yummy recipes, share your recipes, r
   2. You need to sign up to share your recipes.
   3. Recipe will contain Title, Description, Pre Requirenments, Ingredients, Recipe/Steps, Images, Benefits
   4. Recipe/Steps - We have provided an editor to add your recipe using which you can decorate your page.
-  5. Ingredients - Select from list and specify quantity and other details about ingredient for e.g. 
+  5. Ingredients - Select from list and specify quantity and other details about ingredient for e.g. Onion - 1 - Chopped
   6. Images - You can upload as many images as you want to show with your recipe. These image will be display one by one on the page.
   3. You can rate or comment on particular recipe after sign in.
   
@@ -18,6 +18,7 @@ This project is all about get different and yummy recipes, share your recipes, r
   2. Contents will have information about its nutrients, benefits, -ve effects, medicinal usage, taste etc.
   3. Using content's details user can find a recipe which is good for her/him.
   4. User Profile
+  5. Newsletter about 5 top recipes.
 
 **How To Use:**
 
