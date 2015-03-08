@@ -1,7 +1,8 @@
 class RecipesController < ApplicationController
+  before_action :authenticate_user!, only: [:new,:create,:edit,:update]
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
   before_action :collect_recipes, only: [:show, :index]
-
+  
   def index
     @recipe = @recipes.shuffle.first
   end

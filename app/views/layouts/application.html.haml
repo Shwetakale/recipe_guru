@@ -12,6 +12,8 @@
       .container
         = render 'shared/flash'
         = yield
+        - if (not current_user or (params["controller"].eql?("recipes") and (["new","edit"].include?params["action"])))
+          %body{background: asset_url("bg_image2.jpg")}
 
     #footer
       .container

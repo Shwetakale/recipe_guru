@@ -1,28 +1,10 @@
-- if signed_in?
-  %ul.nav.navbar-nav
-    - unless false
-      
-      %li= link_to content_tag(:span, "", class: "glyphicon glyphicon-list-alt") + "  Recipes", recipes_url
-  
-      - if true
-        %li.dropdown
-          = link_to content_tag(:span, "", class: "glyphicon glyphicon-cog") + " " + content_tag(:b, "", class: "caret"), "#", class: "dropdown-toggle", data: { toggle: "dropdown" }
 
-          %ul.dropdown-menu.pull-right
-            %li= link_to content_tag(:span, "", class: "glyphicon glyphicon-wrench") + " Site Profile", "#"
+%ul.nav.navbar-nav
+  %li= link_to content_tag(:span, "", class: "glyphicon glyphicon-list-alt") + "  Recipes", recipes_url
+  - if signed_in?
 
-            %li.divider
-
-            %li= link_to content_tag(:span, "", class: "glyphicon glyphicon-earphone") + " Invite Users", "#"
-
-    %li.dropdown
-      = link_to "Edit User profile", "#", class: "data-toggle", data: { toggle: "dropdown" }
-
-      %ul.dropdown-menu.pull-right
-        - unless false
-
-          %li= link_to content_tag(:span, "", class: "glyphicon glyphicon-edit") + " Profile", "#"
-
-          %li.divider
-
-        %li= link_to content_tag(:span, "", class: "glyphicon glyphicon-log-out") + " Sign Out", destroy_user_session_path, method: :delete
+    %li= link_to "New Recipe", new_recipe_path
+    %li= link_to content_tag(:span, "", class: "glyphicon glyphicon-log-out") + " Sign Out", destroy_user_session_path, method: :delete
+  - else
+    %li= link_to "sign_in", new_user_session_path
+    %li= link_to "sign_up", new_user_registration_path
