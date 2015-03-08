@@ -40,3 +40,7 @@ This project is all about get different and yummy recipes, share your recipes, r
     RECIPE_GURU_PASSWORD: '********'
   ```
 * Add your mail id in lib/development_mail_interceptor.rb 
+* Run ```bundle install```
+* Run ```rake db:create```
+* Run ```rake d:migrate```
+* Run ```rake db:seed```
