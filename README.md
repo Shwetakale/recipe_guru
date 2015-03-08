@@ -1,6 +1,11 @@
 **Recipe Guru**
 =======================================
 
+**Technology**
+  1. Ruby 2.1.5
+  2. Rails 4.1.8
+  2. Postgres
+
 **About the project:**
 This project is all about get different and yummy recipes, share your recipes, rate and comment on recipes.
 
@@ -16,6 +21,7 @@ This project is all about get different and yummy recipes, share your recipes, r
 **TODO:**
   1. Need functionality to add contents/ingredients.
   2. Contents will have information about its nutrients, benefits, -ve effects, medicinal usage, taste etc.
+  3. Mail will be sent to owner and all users which have commented on recipe.
   3. Using content's details user can find a recipe which is good for her/him.
   4. User Profile
   5. Newsletter about 5 top recipes.
