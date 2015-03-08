@@ -1,25 +1,44 @@
-= recipe.title.try(:capitalize)
-%br 
-%b Description:
-= recipe.description
+.row
+  %center
+    %b=recipe.title.try(:capitalize)
+%center= image_tag recipe.images.first.try(:avatar_url)
+.row
+  
+  %b Description:
+.row
+  .col-md-1
+  .col-md-8
+    %p= recipe.description
 - if recipe.pre_requirements.present?
-  %br 
-  %b Pre Requirements:
-  = recipe.pre_requirements
-%br 
-#ingredients
-%table
-  %tr
-    %td
-      %b Ingredients:
-    %td
-      %table
-        - recipe.ingredients.each do |ing|
-          %tr
-            %td
-              #{ing.content.name} - #{ing.quantity}
-    %br 
-= raw recipe.steps
-Rate the recipe : 
+  .row
+    %b Pre Requirements:
+  .row
+    .col-md-1
+    .col-md-8
+      %p= recipe.pre_requirements
+.row#ingredients
+
+  %b Ingredients:
+  .row
+    .col-md-3 Name
+    .col-md-3 Quantity
+    .col-md-3 Taste
+    .col-md-3 Description
+  - recipe.ingredients.each do |ing|
+    .row
+      .col-md-3 
+        = ing.content.name
+      .col-md-3
+        = ing.quantity
+      .col-md-3
+        = ing.content.taste
+      .col-md-3
+        = ing.description
+.row 
+  %b Steps
+.row
+  %p= raw(recipe.steps)
+.row
+  Rate the recipe : 
 = rating_for recipe, "Like", star: 5, disable_after_rate: false
 = commontator_thread(recipe)

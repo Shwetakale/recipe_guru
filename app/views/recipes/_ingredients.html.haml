@@ -1,5 +1,5 @@
 #new_ingredient
-  = f.fields_for :ingredients do |ingredient|
+  = f.simple_fields_for :ingredients do |ingredient|
     .row 
       .col-md-3
         = ingredient.association :content, collection: Content.all.collect{|c| ["#{c.name} - #{c.taste}", c.id]}
