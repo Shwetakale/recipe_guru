@@ -12,6 +12,7 @@
  'Unsalted Butter', 'Leeks', 'Kosher Salt', 
  'Black Pepper', 'Shrimp', 'Lemon', 'Cream', 'Spinach', 'cauliflower', 'potato',
 'capsicum', 'garlic', 'ginger','tomato', 'green peas',' red chilli powder', 'turmeric powder',
-' pav bhaji masala ', 'oil' ' butter', 'onion', 'coriander leaves', 'lemon'].sort.each do |content|
-   Content.find_or_create_by_name({name: content})
+' pav bhaji masala ', 'oil' ' butter', 'onion', 'coriander leaves', 'lemon', 'bread_flour',
+'yeast','salt', 'passata', 'ball mozzarella', 'parmesan', 'basil leaves'].sort.each do |content|
+   Content.find_or_create_by({name: content})
  end
