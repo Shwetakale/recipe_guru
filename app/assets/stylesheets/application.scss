@@ -16,5 +16,9 @@
 @import "bootstrap";
 
 .container{
-  width: 963px;
+  width: 1100px;
 }
+.recipe-tiltle
+{
+  text-overflow: ellipsis;
+} 

@@ -1,8 +1,9 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
+  before_action :collect_recipes, only: [:show, :index]
 
   def index
-    @recipes = Recipe.all
+    @recipe = @recipes.shuffle.first
   end
 
   def new
@@ -39,6 +40,10 @@ class RecipesController < ApplicationController
   private
   def set_recipe
     @recipe = Recipe.find(params[:id])
+  end
+
+  def collect_recipes
+    @recipes = Recipe.all
   end
 
   def recipe_params

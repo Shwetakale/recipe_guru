@@ -38,3 +38,6 @@
   %b Steps
 .row
   %p= raw(recipe.steps)
+.row
+  Rate the recipe : 
+= rating_for recipe, "Like", star: 5, disable_after_rate: false
