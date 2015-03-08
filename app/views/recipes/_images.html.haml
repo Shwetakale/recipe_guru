@@ -1,6 +1,14 @@
-#images
-  = f.fields_for :images do |image|
-    = image.file_field :avatar
-    %br
-    = image.link_to_remove "Remove", class: "btn btn-primary"
-  = f.link_to_add "Add more", :images, class: "btn btn-primary", data: {target: "#images"}
+.col-md-4
+  .col-md-12
+    %label Please add images of your recipe:
+  .col-md-12
+    = f.link_to_add "Add an image", :images, class: "btn btn-danger btn-xs", data: {target: "#images"}
+%br
+.col-md-7
+  #images
+    = f.fields_for :images do |image|
+      .col-md-12
+        .col-md-6
+          = image.file_field :avatar
+        .col-md-4
+          = image.link_to_remove "Remove", class: "btn btn-danger btn-xs"

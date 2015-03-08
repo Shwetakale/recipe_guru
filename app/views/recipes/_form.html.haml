@@ -1,17 +1,29 @@
 .row
-  .col-md-6
-    = f.input :title
-  .col-md-6
-    = f.input :time
-%strong Ingredients
-= render partial: 'ingredients', locals: {f: f}
-= f.input :steps, placeholder: 'Enter Steps here', input_html: {class: 'redactor'}, :as => :ckeditor
+  .col-md-3
+    .col-md-12
+      = f.input :title, label: false, placeholder: 'Title'
+    .col-md-12
+      = f.input :time, label: false, placeholder: 'Time'
+    .col-md-12
+      = f.input :description
+    .col-md-12
+      = f.input :pre_requirements
+    .col-md-12
+  .col-md-9
+    .col-md-12
+      %strong 
+        %label Ingredients
+    .col-md-12
+      = render partial: 'ingredients', locals: {f: f}
+      %br
+      %br
+    .col-md-12
+      = f.input :steps, label: 'Recipe', placeholder: 'Enter Steps here', input_html: {class: 'redactor'}, :as => :ckeditor
 .row
-  .col-md-6
-    = f.input :description
-  .col-md-6
-    = f.input :pre_requirements
-= render partial: 'images', locals: {f: f}
+  = render partial: 'images', locals: {f: f}
+%br
+%br
+%br
 = f.input :benifits
 = f.submit class: "btn btn-primary"
 

@@ -1,13 +1,13 @@
-#new_ingredient
+.col-md-9
+  #new_ingredient
   = f.simple_fields_for :ingredients do |ingredient|
-    .row 
-      .col-md-3
-        = ingredient.association :content, collection: Content.all.collect{|c| ["#{c.name} - #{c.taste}", c.id]}
-      .col-md-3
-        = ingredient.input :quantity
-      .col-md-3
-        = ingredient.input :description
-      .col-md-3
-        %br
-        = ingredient.link_to_remove "Remove", class: "btn btn-primary"
-  = f.link_to_add "Add more", :ingredients, class: "btn btn-primary", data: {target: "#new_ingredient"}
+    .col-md-4
+      = ingredient.association :content, collection: Content.all.collect{|c| ["#{c.name} - #{c.taste}", c.id]}, label: false, prompt: "Select Ingredient"
+    .col-md-3
+      = ingredient.input :quantity, label: false, placeholder: 'Quantity'
+    .col-md-4
+      = ingredient.input :description, input_html: { rows: 1, cols: 6 }, label: false, placeholder: 'Description (if any)'
+    .col-md-1
+      %br
+      = ingredient.link_to_remove "Remove", class: "btn btn-danger btn-xs"
+.col-md-4= f.link_to_add "Add ingredient", :ingredients, class: "btn btn-danger btn-xs", data: {target: "#new_ingredient"}

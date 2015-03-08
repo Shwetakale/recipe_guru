@@ -1,5 +1,7 @@
 .panel-body
   .container-fluid
+    .row.subject
+      %h3 Add your recipe
     = simple_nested_form_for @recipe do |f|
       = render partial: 'form', locals: {f: f}
 
