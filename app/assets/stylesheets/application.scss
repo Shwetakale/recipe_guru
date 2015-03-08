@@ -9,29 +9,47 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
-*
-*= require devise_bootstrap_views
+ *
+ *= require devise_bootstrap_views
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 
 body {
-  background-image:url("bg_image2.jpg");
-  background-size: 100% 100%;
+    background-image:url("bg_image2.jpg");
+    background-size: 100% 100%;
 }
 html {
-  height: 100%
+    height: 100%
 }
 
 .container{
-  width: 1100px;
+    width: 1100px;
 }
 .recipe-tiltle
 {
-  text-overflow: ellipsis;
+    text-overflow: ellipsis;
 } 
 
 .carousel-inner{
-  background-color: #FFE6E6;
+    background-color: #FFE6E6;
+}
+
+
+.panel {
+    background: none;
+}
+
+.panel .panel-heading{
+    background: rgba(122, 130,
+    136, 0.2)!important;
+}
+
+.panel
+.panel-body{
+    background:
+    rgba(46,
+    51, 56,
+    0.2)!important;
 }
