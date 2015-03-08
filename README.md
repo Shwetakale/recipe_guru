@@ -1,5 +1,7 @@
 **Recipe Guru**
 =======================================
+**Ruby Version : 2.1.5**
+**Rails Version : 4.2.0**
 
 **About the project:**
 This project is all about get different and yummy recipes, share your recipes, rate and comment on recipes.
@@ -32,5 +34,4 @@ This project is all about get different and yummy recipes, share your recipes, r
 * Add your mail id in lib/development_mail_interceptor.rb 
 
 
-**Ruby Version : 2.1.5**
-**Rails Version : 4.2.0**
+
