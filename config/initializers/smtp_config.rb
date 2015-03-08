@@ -9,4 +9,4 @@ ActionMailer::Base.smtp_settings  = {
   enable_starttls_auto: true
 }
 
-Mail.register_interceptor(DevelopmentMailInterceptor) #if ["test", "development"].include? Rails.env
+Mail.register_interceptor(DevelopmentMailInterceptor) unless Rails.env.production?
