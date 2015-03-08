@@ -38,11 +38,11 @@ html {
 
 
 .panel-body {
-  background-color: #F5D0A9;
-  filter: alpha(opacity=85); 
-  -moz-opacity: 0.85;
-  -khtml-opacity: 0.85;     
-  opacity: 0.85;
+    background-color: #F5D0A9;
+    filter: alpha(opacity=85); 
+    -moz-opacity: 0.85;
+    -khtml-opacity: 0.85;     
+    opacity: 0.85;
 }
 
 .panel .panel-heading{
@@ -54,16 +54,21 @@ html {
 }
 
 .subject, label{
-  color: #DF013A;
+    color: #DF013A;
 }
 
 .form-control, .cke_chrome{
-  border: 1px solid #B40431;
-  height: 30px;
-  font-size: 12px;
+    border: 1px solid #B40431;
+    height: 30px;
+    font-size: 12px;
 }
 
 .form-control::-moz-placeholder {
-  color: #f5a9a9;
-  opacity: 1;
+    color: #f5a9a9;
+    opacity: 1;
 }
+
+.carousel img {
+    min-width: 100%;
+}
+
