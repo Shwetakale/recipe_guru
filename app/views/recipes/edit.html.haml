@@ -1,8 +1,7 @@
-.panel-body
-  .container-fluid
-    .row.subject
-      .col-md-3
-        %h3 Edit your recipe
-    %br
-    = simple_nested_form_for @recipe do |f|
-      = render partial: 'form', locals: {f: f}
+.container-fluid
+  .row.subject
+    .col-md-3
+      %h3 Edit your recipe
+  %br
+  = simple_nested_form_for @recipe do |f|
+    = render partial: 'form', locals: {f: f}

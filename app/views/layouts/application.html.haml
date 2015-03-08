@@ -10,10 +10,14 @@
     #wrap
       = render 'layouts/navbar'
       .container
-        = render 'shared/flash'
-        = yield
-        - if ((params["controller"].eql?("recipes") and (["new","edit", "create", "update"].include?params["action"])) or params[:controller].include?('devise'))
-          %body{background: asset_url("bg_image2.jpg")}
+        .panel-body
+          = render 'shared/flash'
+          = yield
+          - if ((params["controller"].eql?("recipes") and (["new","edit", "create", "update"].include?params["action"])) or params[:controller].include?('devise'))
+            %body{background: asset_url("bg_image2.jpg")}
+          - else
+            - img_num = ['3', '5'].shuffle.first 
+            %body{background: asset_url("bg_image" + img_num + ".jpeg")}
 
     #footer
       .container
