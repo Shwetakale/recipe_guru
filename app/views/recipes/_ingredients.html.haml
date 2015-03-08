@@ -17,4 +17,4 @@
       = ingredient.input :description, input_html: { rows: 1, cols: 6 }, label: false, placeholder: 'Description (if any)'
     .col-md-1
       %br
-      = ingredient.link_to_remove "Remove", class: "btn btn-danger btn-xs"
+      = ingredient.link_to_remove "Remove", class: "btn btn-danger btn-xs" unless ingredient.object.persisted?
