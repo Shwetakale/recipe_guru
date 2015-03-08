@@ -19,4 +19,6 @@
             %td
               #{ing.content.name} - #{ing.quantity}
     %br 
-= raw(recipe.steps)
+= raw recipe.steps
+Rate the recipe : 
+= rating_for recipe, "Like", star: 5, disable_after_rate: false

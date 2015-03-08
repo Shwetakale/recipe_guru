@@ -1,4 +1,5 @@
 class Recipe < ActiveRecord::Base
+  ratyrate_rateable 'Like'
 
   belongs_to :user
   has_many :ingredients
