@@ -13,7 +13,7 @@
 * Setup postgres configuration (username and password) in database.yml
 * Create environment.yml (config/environment.yml)
 * Add following to config/environment.yml
-  ```
+  ```ruby
     RECIPE_GURU_EMAIL: 'youremail@domain.com'
     RECIPE_GURU_PASSWORD: '********'
   ```
