@@ -3,7 +3,9 @@
     %b=recipe.title.try(:capitalize)
 %center= image_tag recipe.images.first.try(:avatar_url)
 .row
-  
+  %b Time:
+  = recipe.time
+.row
   %b Description:
 .row
   .col-md-1
