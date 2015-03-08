@@ -13,7 +13,7 @@
         .carousel-inner{role:"listbox"}
           - active = 'active'
           - recipe.images.each do |image|
-            %center.item{class: active}= image_tag image.try(:avatar_url), size: '300x300'
+            %center.item{class: active}= image_tag image.try(:avatar).try(:large).url
             - active = ''
 
 
