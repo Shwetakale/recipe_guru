@@ -1,5 +1,6 @@
 class Recipe < ActiveRecord::Base
   ratyrate_rateable 'Like'
+  acts_as_commontable
 
   belongs_to :user
   has_many :ingredients
