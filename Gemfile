@@ -27,6 +27,7 @@ gem 'devise'
 gem "rails-erd"
 gem 'carrierwave'
 gem 'ratyrate'
+gem 'commontator'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
