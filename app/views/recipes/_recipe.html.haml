@@ -23,17 +23,20 @@
       %span{ class: "glyphicon glyphicon-chevron-right", "aria-hidden" => "true" }
       %span.sr-only Next
 
-  %b Description:
-  %p= recipe.description
-  - if recipe.pre_requirements.present?
-    %b Pre Requirements:
-    %p= recipe.pre_requirements
-  #ingredients
-    %b Ingredients:
-    - recipe.ingredients.each do |ing|
-      = ing.content.name + '-' + ing.quantity + '(' + ing.description + ')'
-  %b Recipe:
-  %p= raw(recipe.steps)
-  Rate the recipe : 
-  = rating_for recipe, "Like", star: 5, disable_after_rate: false
-  = commontator_thread(recipe)
+%center= image_tag recipe.images.first.try(:avatar_url)
+%b Time:
+= recipe.time
+%b Description:
+%p= recipe.description
+- if recipe.pre_requirements.present?
+  %b Pre Requirements:
+  %p= recipe.pre_requirements
+#ingredients
+  %b Ingredients:
+  - recipe.ingredients.each do |ing|
+    = ing.content.name + '-' + ing.quantity + '(' + ing.description + ')'
+%b Recipe:
+%p= raw(recipe.steps)
+Rate the recipe : 
+= rating_for recipe, "Like", star: 5, disable_after_rate: false
+= commontator_thread(recipe)

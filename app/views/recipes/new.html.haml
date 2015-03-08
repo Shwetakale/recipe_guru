@@ -1,5 +1,5 @@
 .panel-body
   .container-fluid
-    = simple_form_for @recipe do |f|
+    = simple_nested_form_for @recipe do |f|
       = render partial: 'form', locals: {f: f}
 

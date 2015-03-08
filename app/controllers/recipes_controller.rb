@@ -35,6 +35,12 @@ class RecipesController < ApplicationController
   end
 
   def destroy
+    if @recipe.destroy
+      flash[:success] = 'Recipe deleted Successfully!!'
+      redirect_to root_path
+    else
+      flash[:error] = 'Unable to remove recipe!!'
+    end
   end
   
   private

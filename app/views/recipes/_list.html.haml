@@ -1,3 +1,5 @@
-%ul
+%center.h2
+  %b Available Recipes
+%ul.list-group
   - (@recipes - [@recipe]).each do |recipe|
-    %li.recipe-title= link_to recipe.title, recipe_path(recipe)
+    %li.list-group-item.recipe-title= link_to recipe.title, recipe_path(recipe)
