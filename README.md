@@ -30,3 +30,7 @@ This project is all about get different and yummy recipes, share your recipes, r
     RECIPE_GURU_PASSWORD: '********'
   ```
 * Add your mail id in lib/development_mail_interceptor.rb 
+
+
+**Ruby Version : 2.1.5**
+**Rails Version : 4.2.0**
