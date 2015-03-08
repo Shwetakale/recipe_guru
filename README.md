@@ -17,7 +17,7 @@ This project is all about get different and yummy recipes, share your recipes, r
   1. Need functionality to add contents/ingredients.
   2. Contents will have information about its nutrients, benefits, -ve effects, medicinal usage, taste etc.
   3. Using content's details user can find a recipe which is good for her/him.
-  4. .
+  4. User Profile
 
 **How To Use:**
 
