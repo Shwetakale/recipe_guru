@@ -18,3 +18,4 @@
     RECIPE_GURU_PASSWORD: '********'
   ```
 * Add your mail id in lib/development_mail_interceptor.rb 
+* run ``` bundle install ``
