@@ -12,7 +12,7 @@
       .container
         = render 'shared/flash'
         = yield
-        - if ((params["controller"].eql?("recipes") and (["new","edit"].include?params["action"])) or params[:controller].include?('devise'))
+        - if ((params["controller"].eql?("recipes") and (["new","edit", "create", "update"].include?params["action"])) or params[:controller].include?('devise'))
           %body{background: asset_url("bg_image2.jpg")}
 
     #footer

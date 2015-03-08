@@ -3,6 +3,9 @@
     %strong 
       %label Ingredients:
   .col-md-4= f.link_to_add "Add ingredient", :ingredients, class: "btn btn-danger btn-xs", data: {target: "#new_ingredient"}
+%br
+%br
+%br
 .col-md-9
   #new_ingredient
   = f.simple_fields_for :ingredients do |ingredient|
