@@ -2,4 +2,7 @@
   %b Available Recipes
 %ul.list-group
   - (@recipes - [@recipe]).each do |recipe|
-    %li.list-group-item.recipe-title= link_to recipe.title, recipe_path(recipe)
+    %li.list-group-item.recipe-title
+      %center= link_to recipe.title.upcase, recipe_path(recipe)
+      - unless recipe.images.blank?
+        %center= image_tag (recipe.images.first.try(:avatar).try(:thumb).try(:url))
