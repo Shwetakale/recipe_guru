@@ -13,5 +13,5 @@
  'Black Pepper', 'Shrimp', 'Lemon', 'Cream', 'Spinach', 'cauliflower', 'potato',
 'capsicum', 'garlic', 'ginger','tomato', 'green peas',' red chilli powder', 'turmeric powder',
 ' pav bhaji masala ', 'oil' ' butter', 'onion', 'coriander leaves', 'lemon'].sort.each do |content|
-   Content.create({name: content})
+   Content.find_or_create_by_name({name: content})
  end
