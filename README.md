@@ -1,9 +1,9 @@
 **Recipe Guru**
 =======================================
 
-**About the project**
+**About the project:**
 
-**Supported Modules**
+**Supported Modules:**
 
-**TODO**
+**TODO:**
 
