@@ -22,21 +22,26 @@
     %a{ class: "right carousel-control", href: "#myCarousel", role:"button", "data-slide"=>"prev"}
       %span{ class: "glyphicon glyphicon-chevron-right", "aria-hidden" => "true" }
       %span.sr-only Next
-
-%center= image_tag recipe.images.first.try(:avatar_url)
+%br
 %b Time:
 = recipe.time
+%br
 %b Description:
 %p= recipe.description
+%br
 - if recipe.pre_requirements.present?
   %b Pre Requirements:
   %p= recipe.pre_requirements
+%br
 #ingredients
   %b Ingredients:
   - recipe.ingredients.each do |ing|
     = ing.content.name + '-' + ing.quantity + '(' + ing.description + ')'
+%br
 %b Recipe:
 %p= raw(recipe.steps)
+%br
 Rate the recipe : 
 = rating_for recipe, "Like", star: 5, disable_after_rate: false
+%br
 = commontator_thread(recipe)
