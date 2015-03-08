@@ -12,7 +12,6 @@ This project is all about get different and yummy recipes, share your recipes, r
   6. Images - You can upload as many images as you want to show with your recipe. These image will be display one by one on the page.
   3. You can rate or comment on particular recipe after sign in.
   
-**Supported Modules:**
 
 **TODO:**
   1. Need functionality to add contents/ingredients.
