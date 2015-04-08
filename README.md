@@ -19,16 +19,6 @@ This project is all about get different and yummy recipes, share your recipes, r
   3. You can rate or comment on particular recipe after sign in.
   
 
-**TODO:**
-
-  1. Need functionality to add contents/ingredients.
-  2. Contents will have information about its nutrients, benefits, -ve effects, medicinal usage, taste etc.
-  3. Mail will be sent to owner and all users which have commented on recipe.
-  3. Using content's details user can find a recipe which is good for her/him.
-  4. User Profile.
-  5. Newsletter about 5 top recipes.
-  6. S3 integration to upload images.
-
 **How To Use:**
 
 * Clone project
