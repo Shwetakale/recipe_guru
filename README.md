@@ -12,7 +12,7 @@ This project is all about get different and yummy recipes, share your recipes, r
 
   1. You can get different recipes here without registration.
   2. You need to sign up to share your recipes.
-  3. Recipe will contain Title, Description, Pre Requirenments, Ingredients, Recipe/Steps, Images, Benefits.
+  3. Recipe will contain Title, Description, Pre Requirements, Ingredients, Recipe/Steps, Images, Benefits.
   4. Recipe/Steps - We have provided an editor to add your recipe using which you can decorate your page.
   5. Ingredients - Select from list and specify quantity and other details about ingredient for e.g. Onion - 1 - Chopped
   6. Images - You can upload as many images as you want to show with your recipe. These image will be display one by one on the page.
@@ -32,5 +32,5 @@ This project is all about get different and yummy recipes, share your recipes, r
 * Add your mail id in lib/development_mail_interceptor.rb 
 * Run ```bundle install```
 * Run ```rake db:create```
-* Run ```rake d:migrate```
+* Run ```rake db:migrate```
 * Run ```rake db:seed```
