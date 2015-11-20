@@ -28,6 +28,7 @@ gem "rails-erd"
 gem 'carrierwave'
 gem 'ratyrate'
 gem 'commontator'
+gem 'circleci'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
