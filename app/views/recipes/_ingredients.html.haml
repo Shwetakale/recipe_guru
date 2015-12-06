@@ -10,7 +10,7 @@
   #new_ingredient
   = f.simple_fields_for :ingredients do |ingredient|
     .col-md-4
-      = ingredient.association :content, collection: Content.all.collect{|c| ["#{c.name} - #{c.taste}", c.id]}, label: false, prompt: "Select Ingredient"
+      = ingredient.association :content, collection: Content.order(:name).collect{|c| ["#{c.name} - #{c.taste}", c.id] } << ["other","other"], label: false, prompt: "Select Ingredient"
     .col-md-3
       = ingredient.input :quantity, label: false, placeholder: 'Quantity'
     .col-md-4
